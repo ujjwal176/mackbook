@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  email     String     @unique
+  password  String
+  name      String
+  role      String     @default("creator")
+  campaigns Campaign[]
+  createdAt DateTime   @default(now())
+}
+
+model Campaign {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  category    String
+  goal        Float
+  image       String?
+  creatorId   String
+  creator     User     @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  spots       Spot[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Spot {
+  id           String       @id @default(uuid())
+  spotNumber   Int
+  price        Float
+  isReserved   Boolean      @default(false)
+  campaignId   String
+  campaign     Campaign     @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  reservation  Reservation?
+}
+
+model Reservation {
+  id           String   @id @default(uuid())
+  spotId       String   @unique
+  spot         Spot     @relation(fields: [spotId], references: [id], onDelete: Cascade)
+  brandName    String
+  brandWebsite String
+  brandEmail   String
+  amountPaid   Float
+  createdAt    DateTime @default(now())
+}

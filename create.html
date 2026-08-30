@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Campaign — SponsorMySetup</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar"><a class="logo" href="index.html">Sponsor<span>MySetup</span></a>
+<div class="nav-links"><a href="campaigns.html">Campaigns</a><a href="index.html#how-it-works">How it works</a><a href="dashboard.html">Dashboard</a><a class="nav-btn" href="create.html">Create Campaign</a></div><button class="menu-btn" onclick="toggleMenu()">☰</button></nav>
+
+<main class="page">
+  <div class="page-heading"><p class="eyebrow">CREATOR</p><h1>Create your campaign.</h1><p>Tell brands what you're building and define the sponsorship inventory.</p></div>
+
+  <form class="create-layout" onsubmit="createCampaign(event)">
+    <div class="form-card">
+      <h2>Campaign details</h2>
+      <label>Campaign title<input id="campaignTitle" required placeholder="Sponsor my new PS5 setup"></label>
+      <label>Short description<textarea id="campaignDescription" required placeholder="Explain what you are building and why brands should sponsor it."></textarea></label>
+      <div class="two-col">
+        <label>Category<select id="campaignCategory"><option>Technology</option><option>Creator</option><option>Photography</option><option>Gaming</option></select></label>
+        <label>Funding goal (USD)<input id="campaignGoal" type="number" min="50" required value="2500"></label>
+      </div>
+      <label>Campaign image<input id="campaignImage" type="file" accept="image/*"></label>
+    </div>
+
+    <div class="form-card">
+      <h2>Sponsorship spots</h2>
+      <div class="two-col">
+        <label>Number of spots<input id="spotCount" type="number" min="1" max="20" value="4"></label>
+        <label>Price per spot (USD)<input id="spotPrice" type="number" min="1" value="250"></label>
+      </div>
+      <button class="btn btn-primary full" type="submit">Publish Campaign</button>
+    </div>
+  </form>
+</main>
+<footer><div><strong>SponsorMySetup</strong><p>Turning ambitious projects into sponsored projects.</p></div></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

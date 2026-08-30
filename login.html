@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — SponsorMySetup</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="renderDashboard()">
+  <nav class<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — SponsorMySetup</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="renderDashboard()">
+  <nav class="navbar">
+    <a class="logo" href="index.html">Sponsor<span>MySetup</span></a>
+    <div class="nav-links">
+      <a href="campaigns.html">Campaigns</a>
+      <a href="create.html">Create Campaign</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="dashboard-top">
+      <div>
+        <p class="eyebrow">CREATOR DASHBOARD</p>
+        <h1 id="userGreeting">Dashboard</h1>
+        <p>Track campaigns, sponsors and real-time funding.</p>
+      </div>
+      <a class="btn btn-primary" href="create.html">+ New Campaign</a>
+    </div>
+
+    <!-- Live Metric Cards -->
+    <div class="metric-grid">
+      <div class="metric">
+        <span>Total raised</span>
+        <strong id="dashRaised">$0</strong>
+        <small>Across active campaigns</small>
+      </div>
+      <div class="metric">
+        <span>Spots sold</span>
+        <strong id="dashSold">0</strong>
+        <small>Total reserved</small>
+      </div>
+      <div class="metric">
+        <span>Available spots</span>
+        <strong id="dashLeft">0</strong>
+        <small>Ready for sponsors</small>
+      </div>
+      <div class="metric">
+        <span>Platform fee</span>
+        <strong id="dashFee">$0.00</strong>
+        <small>7% platform fee</small>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <section class="panel">
+        <div class="panel-title"><h2>Your campaigns</h2></div>
+        <div id="dashboardCampaigns">Loading campaigns...</div>
+      </section>
+      <section class="panel">
+        <div class="panel-title"><h2>Recent sponsor activity</h2></div>
+        <div id="activityList">Loading activity...</div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Load Supabase Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>="navbar">
+    <a class="logo" href="index.html">Sponsor<span>MySetup</span></a>
+    <div class="nav-links">
+      <a href="campaigns.html">Campaigns</a>
+      <a href="create.html">Create Campaign</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="dashboard-top">
+      <div>
+        <p class="eyebrow">CREATOR DASHBOARD</p>
+        <h1 id="userGreeting">Dashboard</h1>
+        <p>Track campaigns, sponsors and real-time funding.</p>
+      </div>
+      <a class="btn btn-primary" href="create.html">+ New Campaign</a>
+    </div>
+
+    <!-- Live Metric Cards -->
+    <div class="metric-grid">
+      <div class="metric">
+        <span>Total raised</span>
+        <strong id="dashRaised">$0</strong>
+        <small>Across active campaigns</small>
+      </div>
+      <div class="metric">
+        <span>Spots sold</span>
+        <strong id="dashSold">0</strong>
+        <small>Total reserved</small>
+      </div>
+      <div class="metric">
+        <span>Available spots</span>
+        <strong id="dashLeft">0</strong>
+        <small>Ready for sponsors</small>
+      </div>
+      <div class="metric">
+        <span>Platform fee</span>
+        <strong id="dashFee">$0.00</strong>
+        <small>7% platform fee</small>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <section class="panel">
+        <div class="panel-title"><h2>Your campaigns</h2></div>
+        <div id="dashboardCampaigns">Loading campaigns...</div>
+      </section>
+      <section class="panel">
+        <div class="panel-title"><h2>Recent sponsor activity</h2></div>
+        <div id="activityList">Loading activity...</div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Load Supabase Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
